@@ -1,0 +1,81 @@
+\subsection{Lecture 1} September 14, 2015
+
+The website of the course:
+	\url{http://www.math.toronto.edu/~jkamnitz/courses/mat347/index.html}
+
+Lecture time:
+Monday, Wednesday 11-12 at BA1200
+Friday 10-12 at UC52
+
+Topics: group (symmetries).
+
+\subsubsection{Definitions}
+A binary operation on a set $G$ is a map $\bullet$,
+	$G \times G \to G$ (aka. $(a, b) \to a \cdot b$).
+
+It's called \kw{associative} if $a \cdot ( b \cdot c ) = (a \cdot b) \cdot c$.
+
+It's called \kw{commutative} if $a \cdot b = b \cdot a$.
+
+It has an \kw{identity} if $\exists e \in G$ st. $a \cdot e = a = e \cdot a$.
+
+It has \kw{inverses} if for all $a \in G$ there exists $a^{-1} \in G$ such that
+$a \cdot a^{-1} = e = a^{-1} \cdot a$.
+
+A \kw{group} is a set with a binary operation which is associative and has an identity and inverses.
+
+A commutative group is called an \kw{abelian group}.
+
+A \kw{permutation} of a set $X$ is a bijection $\sigma : X \to X$.
+
+\subsubsection{Examples}
+
+\paragraph{Ex1}
+$\bZ$ with addition, $\bR$ with addition, and
+$\bR^\times=\bR\setminus\{0\}$ with multiplication are all examples of abelian group.
+
+\paragraph{Ex2}
+``The main example''
+
+For any set $X$ define $S_X = \{\textrm{permutation of the set }X\}$.
+The binary operation on $S_X$ \kw{composition}.
+
+If $X=\{1, \ldots, n\}$, then define $S_n$ to be $S_{\{1, \ldots, n\}}$.
+
+\paragraph{Ex3}
+Let $V$ be a vector space over any fields $(\bR, \bQ, \bC, \bF_2, \bF_p)$.
+
+$(V, +)$ is a group, $S_V$ is also a group.
+
+An more interesting example is
+\[GL(V) := \{\textrm{all invertable linear operator } T:V\to V\}\]
+note that $GL(V) \subseteq S_V$
+
+Another interesting example is
+\[GL_n(k) := \{\textrm{invertable nxn matrices with entries in }k\}\]
+
+\paragraph{Ex4}
+If V catties a symmetric bilinear form $\langle,\rangle$,
+then we define $O(V, \langle,\rangle) = \{\textrm{invertable }T:V\to V\textrm{ st }\langle Tv,Tw\rangle = \langle v,w\rangle\textrm{ for all } v,w\in V\}$.
+
+For example, $O(\bR^n, \langle,\rangle) = O_n(\bR) = \{A^\mathrm{invertable} \textrm{ nxn matrices st } AA^{-1} = I$. When $n=2$, $O_2(\bR)$ is rotation and reflection of $\bR^2$.
+
+\begin{prop}
+If $G$ is a group and $a, b, c, d \in G$ and $ab=ac$ then $b=c$.
+\end{prop}
+\begin{proof}
+Start with $ab=ac$ multiply both side by $a^-1$,
+then
+\begin{align*}
+ab &= ac \\
+a^{-1}(ab) &= a^{-1}(ac) \\
+(a^{-1}a)b &= (a^{-1}a)c \\
+b &= c \\
+\end{align*}
+\end{proof}
+\begin{remark}
+Special case: every group has unique identity.
+\end{remark}
+
+
+
